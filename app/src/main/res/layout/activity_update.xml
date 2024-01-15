@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/Profile_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/person"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <TextView
+        android:id="@+id/salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
+        android:text="DZD"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/Salary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Salary"
+        app:layout_constraintTop_toTopOf="@+id/Salary" />
+
+    <EditText
+        android:id="@+id/Phone_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/Phone"
+        android:textColorHint="#424242"
+
+        android:inputType="phone"
+        android:fontFamily="@font/nunito_bold"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name_ET"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <EditText
+        android:id="@+id/Name_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Name"
+        android:textColorHint="#424242"
+        android:fontFamily="@font/nunito_bold"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profile_pic"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <EditText
+        android:id="@+id/Salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/Salary"
+        android:textColorHint="#424242"
+
+        android:fontFamily="@font/nunito_bold"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Phone_ET"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <ImageButton
+        android:id="@+id/add_doc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:background="@drawable/rounded_storage"
+
+        android:layout_marginEnd="80dp"
+        android:contentDescription="@string/Add_document"
+        android:src="@drawable/document"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Salary"
+        app:layout_constraintVertical_bias="0.156" />
+
+    <ImageButton
+        android:id="@+id/apply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:contentDescription="@string/Add_profile_pic"
+        android:src="@drawable/check"
+        android:background="@drawable/rounded_storage"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_doc"
+        app:layout_constraintVertical_bias="0.071" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

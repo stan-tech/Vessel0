@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    app:cardCornerRadius="15dp"
+
+    android:background="@drawable/rounded_layout" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/trav_card">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/Call"
+                android:src="@drawable/pfp"
+
+                app:civ_border_width="0.2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageButton
+                android:id="@+id/call_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="18dp"
+
+                android:background="@drawable/transparent_backround"
+                android:contentDescription="@string/Call"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:rotation="270"
+                android:src="@drawable/phone_enabled"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+                app:layout_constraintStart_toEndOf="@+id/profile_image"
+                app:layout_constraintTop_toTopOf="@+id/profile_image"
+       >
+
+                <TextView
+                    android:id="@+id/Nametv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Name.............."
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.058"
+                    app:layout_constraintStart_toEndOf="@+id/profile_image"
+                    app:layout_constraintTop_toTopOf="@+id/profile_image"
+                    app:layout_constraintVertical_bias="0.142" />
+
+                <TextView
+                    android:id="@+id/Phonetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="055555555555"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+                    app:layout_constraintStart_toStartOf="@+id/Nametv"
+                    app:layout_constraintTop_toBottomOf="@+id/Nametv" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/Closeness"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout7"
+                app:layout_constraintEnd_toStartOf="@+id/call_button"
+                app:layout_constraintHorizontal_bias="0.377"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout7"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout7"
+                app:layout_constraintVertical_bias="0.541" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/extra"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+                android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trav_card"
+
+            >
+            <!---->
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="#E82B60"
+                android:clickable="true"
+                android:background="@drawable/rounded_storage"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/Delete"
+                android:layout_weight="1"
+                android:text="@string/Delete"
+                android:textAllCaps="false"
+                android:drawableLeft="@drawable/delete_white"
+/>
+
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_storage"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/Edit"
+                android:textAllCaps="false"
+                android:backgroundTint="#CEC4DA"
+                android:backgroundTintMode="src_over"
+                android:contentDescription="@string/Edit"
+                android:drawableRight="@drawable/rate" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

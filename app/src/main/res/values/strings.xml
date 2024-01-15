@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">Besoins</string>
+
+    <string name="Other">Other</string>
+    <string name="Search_for">Search for a service...</string>
+    <string name="Closeness">Closeness</string>
+    <string name="Ajouter" translatable="true"> <b>Ajouter</b></string>
+    <string name="mise_a_jour">l\'employé est à jour</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="Call">Call</string>
+    <string name="Table">TABLE</string>
+    <string name="Shop_name"><b>Vessel</b></string>
+    <string name="cancel">Cancel</string>
+    <string name="Ok">Ok</string>
+    <string name="Name">Name</string>
+    <string name="Phone">Phone</string>
+    <string name="Salary">Salary</string>
+    <string name="Salary_">Salary</string>
+    <string name="ajouter_negative">L\'employé n\'était pas ajouté</string>
+    <string name="ajouter_positive">Un employé a était ajouté</string>
+    <string name="aucun_employe">Il n\'existe aucun employé </string>
+    <string name="Delete">Delete</string>
+    <string name="Edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="delete_question">Do you want to continue ?</string>
+    <string name="yes">Yes</string>
+    <string name="Travailleurs">Travailleurs</string>
+    <string name="Add_document">Add document</string>
+    <string name="Add_profile_pic">Add profile picture</string>
+    <string name="null_data">"Il faut remplir tous les champs "</string>
+    <string name="choose_from">Choose from folders</string>
+    <string name="take_picture">Take a picture</string>
+    <string name="Choose">Choose</string>
+    <string name="non_mise_à_jour">l\'employé n\'est pas à jour</string>
+    <string name="Acomptes">Acomptes</string>
+    <string name="Rest">Rest</string>
+    <string name="Acompte">Acomptes</string>
+    <string name="Acompte_added">"Acomptes ajoutés "</string>
+    <string name="Acompte_not_added">Acomptes non ajoutés</string>
+    <string name="Travailleurs_Refreshé">"le travaileur a été refreshé "</string>
+    <string name="Travailleurs_Refreshé_negative">le travaileur n\'a etait pas refreshé</string>
+    <string name="Confirm">Confirm</string>
+    <string name="are_u_sure">Are you sure?</string>
+    <string name="aucun_document">il n\'existe aucun document</string>
+    <string name="document_added">le document a été ajouté</string>
+    <string name="plus_d_information">Plus d\'information</string>
+    <string name="Clients">Clients</string>
+    <string name="client_ajouter_negative">"Le client n'a été pas ajouté "</string>
+    <string name="client_ajouter_positive">Le client a été ajouté avec succé</string>
+    <string name="Address">Address</string>
+    <string name="title_activity_location">LocationActivity</string>
+    <string name="fromMap">From map</string>
+    <string name="Currentlocation">Current location</string>
+    <string name="add_from_contct">Add from contact</string>
+    <string name="you_location">Your location</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="Add_transaction">Ajouter une transaction</string>
+    <string name="Vente">Vente</string>
+    <string name="Achat">Achat</string>
+    <string name="stock">Stock</string>
+    <string name="Facture">Facture</string>
+    <string name="Price">Price</string>
+    <string name="Buying_Price">Buying price</string>
+    <string name="Selling_price">Selling price</string>
+    <string name="Supplier">Supplier</string>
+    <string name="Quantity">Quantity</string>
+    <string name="Type">Type</string>
+    <string name="decriment">decriment</string>
+    <string name="Unit">Unit</string>
+    <string name="fourniss_ajouter_negative">Adding supplier failed</string>
+    <string name="fourniss_ajouter_positive">Supplier added successfully</string>
+    <string name="product_added">Product added successfully</string>
+    <string name="product_not_added">"Product not added ! "</string>
+    <string name="aucun_produit">No product in storage</string>
+    <string name="available">Available</string>
+    <string name="add_bill_question">Add this to a bill ?</string>
+    <string name="product_deleted">Product deleted</string>
+    <string name="product_not_deleted">Product not deleted</string>
+    <string name="product_updated">Product updated</string>
+    <string name="product_not_updated">Product not updated</string>
+    <string name="BillAdded">Bill added</string>
+    <string name="BillNotAdded">Bill not added</string>
+    <string name="Product_name">Product name</string>
+    <string name="Avaliable">Available</string>
+    <string name="Available">Available</string>
+    <string name="Home">Home</string>
+    <string name="Settings">Settings</string>
+    <string name="Ventes">Ventes</string>
+    <string name="Achats">Achats</string>
+    <string name="Factures">Factures</string>
+    <string name="Total">Total</string>
+    <string name="NotYet">Not yet</string>
+    <string name="ChangePrice">Change price</string>
+    <string name="Date">Date</string>
+    <string name="print">Print</string>
+    <string name="bill_deleted">Bill deleted</string>
+    <string name="bill_not_deleted">Bill not deleted</string>
+    <string name="Fournisseur">Fournisseur</string>
+    <string name="CompanyName">Company name</string>
+    <string name="Product">Product</string>
+    <string name="Company">Company</string>
+    <string name="Products">Products</string>
+    <string name="info">Info</string>
+    <string name="not_available">Not available</string>
+    <string name="mise_a_jour_supplier">Supplier is up to date</string>
+    <string name="non_mise_a_jour_supplier">Supplier is not up to date</string>
+    <string name="add_new_supplier">Add new supplier ?</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="add_new_supplier_title">"Add new supplier"</string>
+
+
+</resources>

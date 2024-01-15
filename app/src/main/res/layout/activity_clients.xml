@@ -1,0 +1,47 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Travailleurs"
+    android:background="@color/purple_500">
+
+    <TextView
+        android:id="@+id/title"
+        android:fontFamily="@font/nunito_bold"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Clients"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:textColor="@color/purple_700"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/clients_rev"
+        android:layoutAnimation="@anim/spawn_layout_animation"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+
+    <ImageButton
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="36dp"
+        android:contentDescription="@string/Ajouter"
+        android:elevation="10dp"
+        android:src="@drawable/add"
+        android:background="@drawable/rounded_storage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

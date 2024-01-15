@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/Phone_ET_Layout"
+        android:layout_width="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/Phone"
+        app:endIconMode="clear_text"
+        app:endIconDrawable="@drawable/delete_text"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:startIconDrawable="@drawable/phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name_ET_layout"
+        app:layout_constraintVertical_bias="0.0" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Phone_ET"
+            android:fontFamily="@font/nunito_bold"
+
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        android:id="@+id/CompanyET_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:startIconDrawable="@drawable/company"
+        android:hint="@string/CompanyName"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:endIconMode="clear_text"
+        app:endIconDrawable="@drawable/delete_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Phone_ET_Layout" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/CompanyET"
+            android:fontFamily="@font/nunito_bold"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Name_ET_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="@font/nunito_bold"
+        android:hint="@string/Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:endIconMode="clear_text"
+        app:endIconDrawable="@drawable/delete_text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_title2"
+        app:layout_constraintVertical_bias="0.039"
+        app:startIconDrawable="@drawable/profile_small">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Name_ET"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nunito_bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/addressTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/nunito_semi_bold_"
+        android:text="@string/Currentlocation"
+
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_title" />
+
+    <TextView
+        android:id="@+id/_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/Currentlocation"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CompanyET_layout" />
+
+    <TextView
+        android:id="@+id/_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/add_new_supplier_title"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/Address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_storage"
+        android:contentDescription="@string/you_location"
+        android:ems="10"
+        android:hint="@string/Address"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:src="@drawable/location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Type"
+        app:layout_constraintStart_toStartOf="@+id/Type"
+        app:layout_constraintTop_toBottomOf="@id/Type"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <ImageButton
+        android:id="@+id/add_pic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/rounded_storage"
+        android:contentDescription="@string/Add_profile_pic"
+        android:src="@drawable/camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressTV"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <ImageButton
+        android:id="@+id/Type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/rounded_storage"
+        android:contentDescription="@string/Add_profile_pic"
+        android:src="@drawable/contacts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_pic"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
