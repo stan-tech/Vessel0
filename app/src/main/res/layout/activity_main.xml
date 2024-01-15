@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/purple_500">
+
+
+    <RelativeLayout
+        android:id="@+id/frag_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav">
+
+        <TextView
+            android:id="@+id/shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/Shop_name"
+            android:textAlignment="center"
+            android:textColor="@color/purple_700"
+            android:textSize="70sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/shop"
+
+            android:layout_marginTop="30dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/Add_trans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/recv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="21dp"
+            android:backgroundTint="@color/purple_700"
+            android:contentDescription="@string/Add_transaction"
+            android:drawableLeft="@drawable/trans"
+            android:minHeight="48dp"
+            android:fontFamily="@font/nunito_bold"
+
+            android:paddingHorizontal="15dp"
+            android:text="@string/Add_transaction"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:backgroundTint="@color/white"
+        android:elevation="8dp"
+        app:itemTextColor="@drawable/bottom_nav_color"
+        app:itemIconTint="@drawable/bottom_nav_color"
+        app:menu="@menu/bottom_menu"
+        Widget.MaterialComponents.BottomNavigationView.PrimarySurface = "true"
+        >
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>

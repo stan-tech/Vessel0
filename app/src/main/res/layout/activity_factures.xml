@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Factures"
+    android:background="@color/purple_500">
+
+
+       <TextView
+            android:id="@+id/shop"
+           android:fontFamily="@font/nunito_bold"
+           android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Factures"
+           android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/purple_700"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+
+            android:textSize="70sp" />
+
+    <FrameLayout
+        android:id="@+id/frag_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/nav"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        android:id="@+id/nav"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded"
+        android:elevation="8dp"
+        app:backgroundTint="@color/white"
+        app:itemIconSize="70dp"
+        app:itemIconTint="@drawable/bottom_nav_color"
+        app:itemTextColor="@drawable/bottom_nav_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shop"
+        app:layout_constraintVertical_bias="0.0"
+        app:menu="@menu/transaction_types">
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_shape">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/Choose"
+        android:textSize="20sp"
+        android:fontFamily="@font/nunito_bold"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07999998" />
+    <LinearLayout
+        android:id="@+id/upper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+
+        <ImageButton
+            android:id="@+id/sellButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100dp"
+
+            android:contentDescription="@string/choose_from"
+            android:src="@drawable/sell" />
+
+        <ImageButton
+            android:id="@+id/buyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Achat"
+            android:src="@drawable/buy" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/upper"
+        app:layout_constraintStart_toStartOf="@+id/upper"
+        app:layout_constraintTop_toBottomOf="@id/upper"
+        app:layout_constraintVertical_bias="0.01999998">
+
+        <TextView
+            android:id="@+id/Vente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/Vente"
+            android:layout_marginStart="20dp"
+            android:gravity="start"
+            android:fontFamily="@font/nunito_bold"
+
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textAlignment="viewStart"/>
+
+        <TextView
+            android:id="@+id/take_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_weight="0.5"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito_bold"
+
+            android:layout_marginEnd="18dp"
+            android:text="@string/Achat"
+            android:textAlignment="viewEnd"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

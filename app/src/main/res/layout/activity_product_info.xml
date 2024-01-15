@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/Name_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="@string/Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="viewStart"
+
+        app:layout_constraintBottom_toBottomOf="@+id/prod_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintStart_toEndOf="@+id/prod_pic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.668" />
+
+    <EditText
+        android:id="@+id/S_Price_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:enabled="false"
+
+        android:hint="@string/Selling_price"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="@+id/prod_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintStart_toEndOf="@+id/prod_pic"
+        app:layout_constraintTop_toBottomOf="@+id/Name_ET" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/prod_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="124dp"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:src="@drawable/product_pic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/B_Price_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="14dp"
+        android:ems="10"
+
+        android:enabled="false"
+        android:hint="@string/Buying_Price"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/prod_pic"
+        app:layout_constraintTop_toBottomOf="@+id/Quantity" />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/Supplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="@string/Supplier"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintStart_toEndOf="@+id/prod_pic"
+        app:layout_constraintTop_toBottomOf="@+id/B_Price_ET" />
+
+    <EditText
+        android:id="@+id/Quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="340dp"
+        android:ems="10"
+        android:enabled="false"
+
+        android:hint="@string/Quantity"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintStart_toEndOf="@+id/prod_pic"
+        app:layout_constraintTop_toBottomOf="@+id/S_Price_ET"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="@string/available"
+        android:textSize="20dp"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="@+id/Quantity"
+        app:layout_constraintEnd_toStartOf="@+id/Quantity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/prod_pic"
+        app:layout_constraintTop_toBottomOf="@+id/prod_pic"
+        app:layout_constraintVertical_bias="0.868" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Buying_Price"
+        android:textSize="20dp"
+        android:layout_marginEnd="10dp"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="@+id/B_Price_ET"
+        app:layout_constraintEnd_toStartOf="@+id/B_Price_ET"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/prod_pic"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.813" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="@string/Supplier"
+        android:textSize="20dp"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="@+id/Supplier"
+        app:layout_constraintEnd_toStartOf="@+id/Supplier"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/prod_pic"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Unit"
+        android:textSize="20dp"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="@+id/Unit"
+        app:layout_constraintEnd_toStartOf="@+id/Unit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/prod_pic"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.772" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Type"
+        android:textSize="20dp"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner"
+        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="@+id/prod_pic"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <ImageButton
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/delete"
+        android:minHeight="48dp"
+        android:src="@drawable/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="68dp"
+        android:contentDescription="@string/decriment"
+        android:minHeight="48dp"
+        android:src="@drawable/rate"
+        app:layout_constraintEnd_toStartOf="@+id/delete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Unit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:boxBackgroundColor="#99BAF1"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconDrawable="@drawable/down"
+        app:endIconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/Supplier"
+        app:layout_constraintStart_toStartOf="@+id/Supplier"
+        app:layout_constraintTop_toBottomOf="@+id/Supplier">
+
+        <AutoCompleteTextView
+            android:id="@+id/units_filter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:backgroundTint="#99BAF1"
+            android:dropDownSelector="@drawable/rounded_selection"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:inputType="none"
+            android:maxLines="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:text="Units"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/spinner"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:boxBackgroundColor="#99BAF1"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconDrawable="@drawable/down"
+        app:endIconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/Supplier"
+        app:layout_constraintStart_toStartOf="@+id/Supplier"
+        app:layout_constraintTop_toBottomOf="@+id/Unit">
+
+        <AutoCompleteTextView
+            android:id="@+id/typesFilter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:backgroundTint="#99BAF1"
+            android:ellipsize="end"
+            android:inputType="none"
+            android:maxLines="1"
+            android:dropDownSelector="@drawable/rounded_selection"
+            android:enabled="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:text="All Types"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageButton
+        android:id="@+id/Validate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="60dp"
+        android:contentDescription="@string/Add_profile_pic"
+        android:src="@drawable/check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.984"
+        app:layout_constraintStart_toEndOf="@+id/add_pic"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <ImageButton
+        android:id="@+id/add_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="52dp"
+        android:contentDescription="@string/Add_profile_pic"
+        android:src="@drawable/camera"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+</androidx.constraintlayout.widget.ConstraintLayout>

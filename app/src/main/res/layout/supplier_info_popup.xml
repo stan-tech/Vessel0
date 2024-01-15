@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_search"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    >
+
+    <TextView
+        android:id="@+id/Product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_weight="1"
+
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="left"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+
+        android:text="@string/Products"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/Product"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="350dp"
+        android:layout_height="170dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_search_outlined"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Info_tv">
+
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="start"
+
+            android:minHeight="48dp"
+            android:text="@string/Name"
+            android:textColor="@color/black"
+
+            android:textSize="20dp"
+            android:textStyle="bold" />
+         <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/medium"
+            android:gravity="left"
+            android:minHeight="48dp"
+            android:text="50000"
+            android:textColor="@color/purple_700"
+
+            android:textSize="20dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/Phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="start"
+            android:minHeight="48dp"
+            android:text="@string/Phone"
+            android:textColor="@color/black"
+
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+
+            android:fontFamily="@font/medium"
+            android:gravity="left"
+            android:minHeight="48dp"
+            android:text="50000"
+            android:textColor="@color/purple_700"
+
+            android:textSize="20dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/CompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito_bold"
+
+            android:gravity="start"
+            android:minHeight="48dp"
+            android:text="@string/Company"
+            android:textColor="@color/black"
+            android:textAlignment="viewStart"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Company_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/medium"
+            android:layout_marginStart="20dp"
+
+            android:gravity="left"
+            android:minHeight="48dp"
+            android:text="50000"
+            android:textColor="@color/purple_700"
+
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="-98dp"
+            tools:layout_editor_absoluteY="358dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Info_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/extrabold"
+        android:minHeight="48dp"
+        android:text="@string/plus_d_information"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

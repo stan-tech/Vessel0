@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/call_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/Call"
+                android:minWidth="60dp"
+                android:minHeight="60dp"
+                android:rotation="270"
+                android:src="@drawable/phone_enabled"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.903"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.046" />
+
+            <TextView
+                android:id="@+id/phone_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:minHeight="48dp"
+                android:text="@string/Phone"
+                android:fontFamily="@font/nunito_bold"
+
+                android:textAlignment="center"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toEndOf="@+id/profile_pic"
+                app:layout_constraintTop_toBottomOf="@+id/name_TV" />
+
+            <TextView
+                android:id="@+id/name_TV"
+                android:fontFamily="@font/nunito_bold"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="200dp"
+                android:layout_marginStart="10dp"
+                android:minHeight="48dp"
+                android:text="@string/Name"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.106"
+                app:layout_constraintStart_toEndOf="@+id/profile_pic"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.03" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/person"
+                app:layout_constraintBottom_toTopOf="@id/linearLayout3"
+                app:layout_constraintEnd_toStartOf="@id/name_TV"
+                app:layout_constraintHorizontal_bias="0.07"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            <ImageButton
+                android:id="@+id/expand_btt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/transparent_backround"
+                android:contentDescription="@string/Call"
+                android:minWidth="80dp"
+                android:src="@drawable/expand_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phone_TV"
+                app:layout_constraintVertical_bias="0.0" />-->
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phone_TV"
+                app:layout_constraintVertical_bias="0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/salaryTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:minHeight="48dp"
+                        android:text="@string/Salary_"
+                        android:fontFamily="@font/nunito_bold"
+
+                        android:textAlignment="center"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/SalaryTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="5dp"
+                        android:minHeight="48dp"
+                        android:text="50000"
+                        android:fontFamily="@font/nunito_bold"
+
+                        android:textAlignment="center"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/salaryTV"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <TextView
+                        android:id="@+id/Acompte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:minHeight="48dp"
+                        android:text="@string/Acomptes"
+                        android:textAlignment="center"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nunito_bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/acompte_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginTop="5dp"
+                        android:minHeight="48dp"
+                        android:text="50000"
+                        android:fontFamily="@font/nunito_bold"
+
+                        android:textAlignment="center"
+                        android:textSize="25dp" />
+
+                    <ImageButton
+                        android:id="@+id/add_acompte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+
+                        android:contentDescription="@string/Add_document"
+                        android:minHeight="48dp"
+                        android:src="@drawable/small_add" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/rest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+
+                        android:minHeight="48dp"
+                        android:text="@string/Rest"
+                        android:fontFamily="@font/nunito_bold"
+
+                        android:textAlignment="center"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.045"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                        app:layout_constraintVertical_bias="0.181" />
+
+                    <TextView
+                        android:id="@+id/restTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="5dp"
+                        android:minHeight="48dp"
+                        android:text="222222"
+                        android:textAlignment="center"
+                        android:textSize="25dp"
+                        android:fontFamily="@font/nunito_bold"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/rest"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.266"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                        app:layout_constraintVertical_bias="1.0" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp">
+
+                    <ImageButton
+                        android:id="@+id/Voir_doc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/Add_document"
+                        android:src="@drawable/document"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/restTV"
+                        app:layout_constraintVertical_bias="0.201" />
+
+                    <ImageButton
+                        android:id="@+id/Add_doc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="10dp"
+
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/Add_document"
+                        android:src="@drawable/add"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/restTV"
+                        app:layout_constraintVertical_bias="0.201" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/refresh_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/transparent_backround"
+                android:contentDescription="@string/Call"
+                android:minWidth="80dp"
+                android:minHeight="80dp"
+                android:rotation="270"
+
+                android:src="@drawable/refresh"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FactureInfo"
+    android:background="@color/purple_500">
+
+
+    <TextView
+        android:id="@+id/date"
+        android:fontFamily="@font/nunito_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Date"
+        android:textStyle="bold"
+        app:flow_verticalAlign="center"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:textSize="50sp" />
+
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:background="@drawable/rounded_search"
+        android:drawableRight="@drawable/search"
+        android:fontFamily="@font/nunito_regular"
+        android:hint="   search..."
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/SortBy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/SortBy"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeWidth="0dp"
+        android:layout_marginEnd="10dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconDrawable="@drawable/sort_by_dropdown"
+        app:endIconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date">
+
+        <AutoCompleteTextView
+            android:id="@+id/sort_by_filter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:backgroundTint="#FFFFFF"
+            android:dropDownSelector="@drawable/rounded_selection"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:inputType="none"
+            android:maxLines="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:text="Sort by"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search">
+
+        <Button
+            android:id="@+id/delete_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:elevation="10dp"
+            android:text="@string/delete"
+            android:textAllCaps="false"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:drawableRight="@drawable/delete_white"
+            android:backgroundTint="#E82B60"
+            />
+
+        <Button
+            android:id="@+id/print_bill"
+            android:backgroundTint="#36DCEC"
+            android:text="@string/print"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:elevation="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/print"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bill_line_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layoutAnimation="@anim/spawn_layout_animation"
+        app:layout_constraintBottom_toTopOf="@id/BillSum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttons_layout" />
+    <TextView
+        android:id="@+id/BillSum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
+        android:text="00.00 DZD"
+        android:background="@drawable/rounded_layout"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:elevation="10dp"
+        android:layout_marginBottom="15dp"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Stock"
+    android:background="@color/purple_500"  >
+<TextView
+    android:id="@+id/act_title"
+    android:layout_width="wrap_content"
+    android:fontFamily="@font/nunito_bold"
+
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:text="@string/stock"
+    android:textStyle="bold"
+    android:textColor="@color/black"
+    android:textSize="50sp"
+    />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/products_RV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_title" />
+
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="10dp"
+
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="45dp"
+            android:background="@android:color/transparent"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Add"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageButton
+                android:id="@+id/cartButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+
+                android:background="@drawable/rounded_storage"
+                android:contentDescription="@string/Facture"
+                android:elevation="5dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/cart"
+                app:maxImageSize="50dp" />
+
+            <TextView
+
+                android:id="@+id/purchase_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35.5dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_cart_number"
+                android:elevation="10dp"
+                android:fontFamily="@font/nunito_bold"
+
+                android:minWidth="26dp"
+                android:text=" 0 "
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/purchase_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp"
+            android:maxLines="1"
+            android:minHeight="25dp"
+
+            android:layout_toStartOf="@+id/Add"
+            android:layout_toEndOf="@+id/cart"
+            android:background="@drawable/rounded_storage"
+            android:elevation="2dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text=" 0.00 DZD "
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Add"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/cart"
+            app:layout_constraintTop_toBottomOf="@+id/products_RV"
+            app:layout_constraintVertical_bias="0.322" />
+
+        <ImageButton
+            android:id="@+id/Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="56dp"
+            android:background="@drawable/rounded_storage"
+            android:contentDescription="@string/Address"
+            android:elevation="5dp"
+            android:src="@drawable/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </RelativeLayout>
+
+
+    <ImageButton
+        android:id="@+id/Validate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:src="@drawable/validate_trans"
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:background="@drawable/rounded_storage"
+        android:contentDescription="@string/Address"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

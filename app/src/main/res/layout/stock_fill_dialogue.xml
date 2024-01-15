@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/prod_pic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="15dp"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:src="@drawable/product"
+        app:layout_constraintBottom_toTopOf="@+id/Name_ET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Name_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Name"
+        android:fontFamily="@font/nunito_bold"
+
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.243" />
+
+    <EditText
+        android:id="@+id/B_Price_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Buying_Price"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunito_bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name_ET"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <EditText
+        android:id="@+id/S_Price_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/Selling_price"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunito_bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/B_Price_ET"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <AutoCompleteTextView
+        android:id="@+id/Supplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="268dp"
+        android:ems="10"
+        android:layout_marginTop="2dp"
+        android:hint="@string/Supplier"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunito_bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Quantity"
+        app:layout_constraintVertical_bias="0.515" />
+
+
+
+    <EditText
+        android:id="@+id/Quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="340dp"
+        android:ems="10"
+        android:text="0"
+        android:hint="@string/Quantity"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunito_bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S_Price_ET" />
+
+    <ImageButton
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/decriment"
+        android:minHeight="48dp"
+        android:src="@drawable/minus"
+        app:layout_constraintBottom_toBottomOf="@+id/Quantity"
+        app:layout_constraintEnd_toStartOf="@+id/Quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S_Price_ET" />
+
+    <ImageButton
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/decriment"
+        android:minHeight="48dp"
+        android:src="@drawable/plus"
+        app:layout_constraintBottom_toBottomOf="@+id/Quantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Quantity"
+        app:layout_constraintTop_toBottomOf="@+id/S_Price_ET" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Unit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:boxBackgroundColor="#99BAF1"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconDrawable="@drawable/down"
+        app:endIconTint="@color/black"
+        android:fontFamily="@font/nunito_bold"
+        app:layout_constraintEnd_toEndOf="@+id/Supplier"
+        app:layout_constraintStart_toStartOf="@+id/Supplier"
+        app:layout_constraintTop_toBottomOf="@+id/Supplier">
+
+        <AutoCompleteTextView
+            android:id="@+id/units_filter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:backgroundTint="#99BAF1"
+            android:dropDownSelector="@drawable/rounded_selection"
+            android:ellipsize="end"
+            android:inputType="none"
+            android:maxLines="1"
+            android:fontFamily="@font/nunito_bold"
+
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:text="Units"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/spinner"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:fontFamily="@font/nunito_bold"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:boxBackgroundColor="#99BAF1"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconDrawable="@drawable/down"
+        app:endIconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/Supplier"
+        app:layout_constraintStart_toStartOf="@+id/Supplier"
+        app:layout_constraintTop_toBottomOf="@+id/Unit">
+
+        <AutoCompleteTextView
+            android:fontFamily="@font/nunito_bold"
+
+            android:id="@+id/typesFilter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:backgroundTint="#99BAF1"
+            android:ellipsize="end"
+            android:inputType="none"
+            android:maxLines="1"
+            android:dropDownSelector="@drawable/rounded_selection"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:text="All Types"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageButton
+        android:id="@+id/Validate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="60dp"
+        android:contentDescription="@string/Add_profile_pic"
+        android:src="@drawable/check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/add_pic"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <ImageButton
+        android:id="@+id/add_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/Add_profile_pic"
+        android:src="@drawable/camera"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+</androidx.constraintlayout.widget.ConstraintLayout>
